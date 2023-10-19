@@ -1,0 +1,36 @@
+.banner{
+    width: 100%;
+    height: 60vh;
+}
+
+
+/* ----------HELPERS  ↓↓--------------  */
+
+/* .containerHelpers{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .helpers{
+    display:grid;
+    place-items: center;
+    justify-content: space-evenly;
+    margin: 1rem;
+    padding:2rem;
+    text-align: center;
+    width: 80%;
+  }
+  .helpers h2{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  .helpers p{
+    font-size: 14px;
+    line-height: 18px;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+  .logosInfoHelper{
+    margin: 1rem;
+    width: 5rem;
+  } */

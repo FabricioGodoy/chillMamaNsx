@@ -1,0 +1,37 @@
+.containerRedesSociales {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 60vh;
+  margin: auto;
+  align-items: center;
+  /* background-image: url(../../../../images/products/fondoImgcard.jpg); */
+  background-attachment: fixed;
+  background-size: cover;
+}
+.cardRedesSociales {
+  border-radius: 20px;
+  box-shadow: 1px 3px 1px 1px rgb(0, 0, 0, 0.5);
+}
+/* .cardRedesSociales:hover {
+  box-shadow: 3px 1px 5px 3px rgb(196, 24, 24, 0.5);
+} */
+@media (max-width: 800px) {
+  .cardRedesSociales {
+    width: 50%;
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .cardRedesSociales {
+    width: 60%;
+    margin: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .cardRedesSociales {
+    width: 70%;
+    margin: 2rem;
+  }
+}

@@ -1,0 +1,44 @@
+.containerPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 5rem;
+}
+
+.containerPagination button {
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  margin: 0 2rem 0 2rem;
+}
+.containerPagination button:hover {
+  opacity: 1;
+}
+.containerPagination button[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.containerPagination button img {
+  color: aliceblue;
+}
+.containerPagination input {
+  width: 50px;
+  text-align: center;
+}
+.containerPagination p {
+  margin: 1px;
+}
+
+@media (max-width: 500px) {
+  .pSpan{
+    display: none;
+  }
+}

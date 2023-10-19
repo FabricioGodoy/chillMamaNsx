@@ -1,0 +1,63 @@
+
+.containerSVG {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  margin-top: 4rem;
+}
+.containerSvgTxt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 25%;
+  text-align: center;
+/* overflow: hidden; */
+}
+.iconSvgHome {
+  display: flex;
+  width: 100px;
+}
+.containerSVG p {
+  width: 100%;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25.2px;
+  letter-spacing: normal;
+  font-weight: bold;
+}
+@media (max-width: 800px) {
+  .containerSVG {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .containerSvgTxt {
+    margin: 1rem;
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+
+/*   .iconSvgHome {
+    width: 10rem;
+  } */
+  .containerSvgTxt {
+    margin: 1rem;
+    width: 40%;
+  }
+  .containerSVG h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+    .containerSvgTxt {
+        margin: 1rem;
+        width: 35%;
+      }
+}

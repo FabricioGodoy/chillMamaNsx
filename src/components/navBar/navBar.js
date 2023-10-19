@@ -15,7 +15,7 @@ export const NavBar = (props) => {
   });
   return (
     <header className="header">
-      <span className="lineaNegra">CHILL MAMA </span>
+      <span className="lineaNegra">C H I L L  M A M A </span>
       <Link to="/" className="logo">
         <img src={logo} alt="logo navbar" className="brand-tittle" />
       </Link>

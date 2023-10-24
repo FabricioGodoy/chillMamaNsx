@@ -8,7 +8,7 @@ import "./collection.css";
 export function Collection() {
   const [collection, setCollection] = useState([]);
   const [pagina, setPagina] = useState(1);
-  const [cantidadPorPagina, setCantidadPorPagina] = useState(7);
+  const [cantidadPorPagina, setCantidadPorPagina] = useState(10);
 
   useEffect(() => {
     RequestAllProducts()

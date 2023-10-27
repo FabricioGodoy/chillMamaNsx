@@ -9,10 +9,10 @@ const logo = `${process.env.PUBLIC_URL}/img/chillmamaLogo.jpg`
 
 export const NavBar = (props) => {
 
-  window.addEventListener("scroll", function () {
+/*   window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
-  });
+  }); */
   return (
     <header className="header">
       <span className="lineaNegra">CHILL MAMA </span>
@@ -32,7 +32,7 @@ export const NavBar = (props) => {
       <nav className="navigation">
         <ul>
           <li>
-            <Link to="collection">Men</Link>
+            <Link to="collection">Buzos</Link>
             <ul>
               <li className="listadoScroll">
                 {/*  <div title="MARCAS" id="navbarScrollingDropdown">

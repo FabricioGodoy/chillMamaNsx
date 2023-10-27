@@ -12,7 +12,7 @@ export default function CardGamers() {
   useEffect(() => {
     RequestAllProducts()
       .then((resp) => {
-        setGamingPc(resp.filter((pc) => pc.gaming === "yes"));
+        setGamingPc(resp.filter((pc) => pc.category === "Buzos"));
       })
       .catch((error) => {
         console.log(error);
@@ -22,7 +22,7 @@ export default function CardGamers() {
   return (
     <>
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Gaming products</h1>
+        <h1 className=" titleCollection "> Buzos</h1>
 
         {gamingPc
           .slice(

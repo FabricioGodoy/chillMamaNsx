@@ -10,7 +10,7 @@ export default function CardOffice() {
   useEffect(() => {
     RequestAllProducts()
       .then((resp) => {
-        setOfficePc(resp.filter((pc) => pc.office === "yes"));
+        setOfficePc(resp.filter((pc) => pc.category === "Remeras"));
         //     console.log(officePc);
       })
       .catch((error) => {
@@ -21,7 +21,7 @@ export default function CardOffice() {
   return (
     <>
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Office products</h1>
+        <h1 className=" titleCollection "> Remeras</h1>
 
         {officePc.map((pc) => (
           <div className="cardGamer" key={pc.id}>

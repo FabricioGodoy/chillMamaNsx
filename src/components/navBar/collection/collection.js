@@ -13,7 +13,7 @@ export function Collection() {
   useEffect(() => {
     RequestAllProducts()
       .then((resp) => {
-        setCollection(resp.filter((collect) => collect.collection === "yes"));
+        setCollection(resp.filter((collect) => collect.buzo === "yes"));
       })
       .catch((error) => {
         console.log(error);
@@ -27,7 +27,7 @@ export function Collection() {
     <>
       {" "}
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Collection products</h1>
+        <h1 className=" titleCollection "> Buzos Chill Mama</h1>
         {collection.slice(
           (pagina-1)*cantidadPorPagina,
           (pagina-1)*cantidadPorPagina+cantidadPorPagina

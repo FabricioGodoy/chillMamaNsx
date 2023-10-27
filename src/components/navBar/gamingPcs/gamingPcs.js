@@ -12,7 +12,7 @@ export const GamingPcs = () => {
     useEffect(() => {
       RequestAllProducts()
         .then((resp) => {
-          setGaming(resp.filter((pcGaming) => pcGaming.gaming === "yes"));
+          setGaming(resp.filter((pcGaming) => pcGaming.category === "Buzos"));
         })
         .catch((error) => {
           console.log(error);
@@ -24,7 +24,7 @@ export const GamingPcs = () => {
     return (
       <>
       <div className="contenedorCardsGamers container-fluid">
-         <h1 className=" titleCollection "> Gaming products</h1>
+         <h1 className=" titleCollection "> Buzos </h1>
         {gaming.slice(
           (pagina-1)*cantidadPorPagina,
           (pagina-1)*cantidadPorPagina+cantidadPorPagina

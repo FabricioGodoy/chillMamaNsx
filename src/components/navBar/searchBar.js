@@ -91,7 +91,7 @@ export const SearchBar = () => {
 
           <div className=" ">
             {/* ESTAR ATENTOS AL NUMERO DE PRODUCTOS */}
-            {productFilter && productFilter !== '' && productFilter.length !== 63  &&
+            {productFilter && productFilter !== '' && productFilter.length !== 20  &&
               productFilter
                 .slice(
                   (pagina - 1) * resultadoBusqueda,

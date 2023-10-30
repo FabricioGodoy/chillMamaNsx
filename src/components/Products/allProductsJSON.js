@@ -10,8 +10,8 @@ export const allProductsJSON = [
     name: "Buzos",
     color: "Negro",
     brand: "Buzos",
-    price: "58.90",
-    prevPrice: "88.90",
+    price: "5890",
+    prevPrice: "8890",
     sale: "sold out"
   },
   {
@@ -25,8 +25,8 @@ export const allProductsJSON = [
     name: "Buzo espalda",
     color: "Rosa",
     brand: "Buzos",
-    price: "58.90",
-    prevPrice: "88.90",
+    price: "5890",
+    prevPrice: "8890",
     sale: "sale"
   },
   {

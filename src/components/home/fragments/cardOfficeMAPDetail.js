@@ -15,7 +15,7 @@ export const CardOfficeMAPDetail = ({ pcOffice }) => {
 		<>
 			{pcOffice
 				&& <div className="container contenedorDetail my-5">
-					<div className="columna1 my-3">
+					<div className="columna1">
 						<img src={process.env.PUBLIC_URL + pcOffice.img} alt="" className="imgDetailProduct" />
 					</div>
 					<div className="columna2">

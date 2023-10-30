@@ -34,21 +34,20 @@ export const NavBar = (props) => {
           <li>
             <Link to="collection">Buzos</Link>
             <ul>
-              <li className="listadoScroll">
-                {/*  <div title="MARCAS" id="navbarScrollingDropdown">
-                  {marcasMapeadas.map((link) => {
-                    return (
-                      <div key={link.Codigo}>
-                        <Link
-                          to={`/marcas/${link.Codigo}`}
-                          className="listMarcas"
-                        >
-                          {link.Descripcion}
-                        </Link>
-                      </div>
-                    );
-                  })}
-                </div> */}
+              <li>
+                <Link to="#">Buzos negros</Link>
+              </li>
+              <li>
+                <Link to="#">Buzos blancos</Link>{" "}
+              </li>
+              <li>
+                <Link to="#">Buzos azules </Link>
+              </li>
+              <li>
+                <Link to="#">Buzos de putos</Link>{" "}
+              </li>
+              <li>
+                <Link to="#">Buzos</Link>
               </li>
             </ul>
           </li>

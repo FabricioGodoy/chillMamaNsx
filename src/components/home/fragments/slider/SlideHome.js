@@ -9,19 +9,19 @@ function SlideHome() {
 			<Carousel.Item className="img-carousel-item">
 				<img className="d-block w-100 img-carousel" src={`${process.env.PUBLIC_URL}/img/dibujos/dibujoDiseno2.jpg`} alt="Second slide" />
 				<Carousel.Caption className="item-carousel-caption">
-					<Link to={`/collection`} className="boton-slider">REMERAS</Link>
+					<Link to={`/buzos`} className="boton-slider">REMERAS</Link>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item className="img-carousel-item">
 				<img className="d-block w-100 img-carousel" src={`${process.env.PUBLIC_URL}/img/dibujos/dibujoDiseno.jpg`} alt="Second slide" />
 				<Carousel.Caption className="item-carousel-caption">
-					<Link to={`/collection`} className="boton-slider">BUZOS</Link>
+					<Link to={`/buzos`} className="boton-slider">BUZOS</Link>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item className="img-carousel-item">
 				<img className="d-block w-100 img-carousel" src={`${process.env.PUBLIC_URL}/img/dibujos/dibujoDiseno3.jpg`} alt="Second slide" />
 				<Carousel.Caption className="item-carousel-caption">
-					<Link to={`/collection`} className="boton-slider bg-secondary">DISEÑOS</Link>
+					<Link to={`/buzos`} className="boton-slider bg-secondary">DISEÑOS</Link>
 				</Carousel.Caption>
 			</Carousel.Item>
 		</Carousel>

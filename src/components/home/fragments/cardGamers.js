@@ -5,14 +5,14 @@ import { RequestAllProducts } from "../../helpers/requestAllProducts";
 import { Link } from "react-router-dom";
 
 export default function CardGamers() {
-  const [gamingPc, setGamingPc] = useState([]);
+  const [remeras, setremeras] = useState([]);
   const [pagina, setPagina] = useState(1);
   const [cantidadPorPagina, setCantidadPorPagina] = useState(4);
 
   useEffect(() => {
     RequestAllProducts()
       .then((resp) => {
-        setGamingPc(resp.filter((pc) => pc.category === "Buzos"));
+        setremeras(resp.filter((pc) => pc.category === "Buzos"));
       })
       .catch((error) => {
         console.log(error);
@@ -22,9 +22,9 @@ export default function CardGamers() {
   return (
     <>
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Buzos</h1>
+        <h1 className=" titlebuzos "> Buzos</h1>
 
-        {gamingPc
+        {remeras
           .slice(
             (pagina - 1) * cantidadPorPagina,
             (pagina - 1) * cantidadPorPagina + cantidadPorPagina
@@ -66,7 +66,7 @@ export default function CardGamers() {
             </div>
           ))}
       </div>
-      <Link to="/gamingPcs" className="linkSeeAll">
+      <Link to="/remeras" className="linkSeeAll">
         <button className="buttonSeeAll"> See all</button>
       </Link>
     </>

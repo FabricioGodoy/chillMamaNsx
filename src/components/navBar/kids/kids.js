@@ -3,7 +3,7 @@ import { Pagination } from "../../helpers/Pagination";
 import { RequestAllProducts } from "../../helpers/requestAllProducts";
 import { Link } from "react-router-dom";
 
-export const OfficePcs = () => {
+export const Kids = () => {
     const [office, setOffice] = useState([]);
     const [pagina, setPagina] = useState(1);
     const [cantidadPorPagina, setCantidadPorPagina] = useState(4);
@@ -23,7 +23,7 @@ export const OfficePcs = () => {
   return (
     <>
     <div className="contenedorCardsGamers container-fluid">
-       <h1 className=" titleCollection "> Office products</h1>
+       <h1 className=" titlebuzos "> Office products</h1>
       {office.slice(
           (pagina-1)*cantidadPorPagina,
           (pagina-1)*cantidadPorPagina+cantidadPorPagina

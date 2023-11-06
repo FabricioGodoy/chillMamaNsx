@@ -32,7 +32,7 @@ export const NavBar = (props) => {
       <nav className="navigation">
         <ul>
           <li>
-            <Link to="collection">Buzos</Link>
+            <Link to="buzos">Buzos</Link>
             <ul>
               <li>
                 <Link to="#">Buzos negros</Link>
@@ -52,7 +52,7 @@ export const NavBar = (props) => {
             </ul>
           </li>
           <li>
-            <Link to="gamingPcs">Women</Link>
+            <Link to="remeras">Remeras</Link>
             {/*  <ul>
               <li>
                 <Link to="/nuestraEmpresa">La Empresa</Link>
@@ -72,7 +72,7 @@ export const NavBar = (props) => {
             </ul> */}
           </li>
           <li>
-            <Link to="/officePcs">Kids</Link>
+            <Link to="/kids">Kids</Link>
             {/*     <ul>
               <li>
                 <Link to="/capacitaciones">Capacitaciones</Link>
@@ -84,9 +84,9 @@ export const NavBar = (props) => {
               </li>
             </ul> */}
           </li>
-          <li>
+        {/*   <li>
             <Link to="/componentsNavBar">Core</Link>
-            {/* <ul>
+             <ul>
               <li>
                 <Link to="/rma">RMA</Link>
               </li>
@@ -94,10 +94,10 @@ export const NavBar = (props) => {
                 <Link to="http://www.solutionboxusa.com/downloads/catalogo-SB-Group.pdf"
                     target="_blank">Catálogo digital</Link>
               </li>
-            </ul> */}
-          </li>
+            </ul> 
+          </li> */}
           <li>
-            <Link to="/peripherals">Favs</Link>
+            <Link to="/releases">Releases</Link>
             {/*   <ul className="listadoScroll">
               <li>
                 <Link to="https://www.solutionbox.com.ar/">

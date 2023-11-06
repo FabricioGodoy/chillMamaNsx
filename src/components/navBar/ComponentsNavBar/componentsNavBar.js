@@ -25,7 +25,7 @@ export const ComponentsNavBar = () => {
   return (
     <>
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Components products</h1>
+        <h1 className=" titlebuzos "> Components products</h1>
         {components.slice(
           (pagina-1)*cantidadPorPagina,
           (pagina-1)*cantidadPorPagina+cantidadPorPagina

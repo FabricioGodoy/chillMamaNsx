@@ -1,39 +1,38 @@
 import React,{ useEffect, useState} from "react";
-import { Pagination } from "../../helpers/Pagination";
 import { RequestAllProducts } from "../../helpers/requestAllProducts";
-import "./gaminsPcs.css";
 import { Link } from "react-router-dom";
+import { Pagination } from "../../helpers/Pagination";
 
-export const GamingPcs = () => {
-    const [gaming, setGaming] = useState([]);
+export const Releases = () => {
+    const [peripheral, setPeripheral] = useState([]);
     const [pagina, setPagina] = useState(1);
-    const [cantidadPorPagina, setCantidadPorPagina] = useState(7);
+  const [cantidadPorPagina, setCantidadPorPagina] = useState(7);
 
     useEffect(() => {
       RequestAllProducts()
         .then((resp) => {
-          setGaming(resp.filter((pcGaming) => pcGaming.category === "Buzos"));
+            setPeripheral(resp.filter((releases) => releases.releases === "yes"));
         })
         .catch((error) => {
           console.log(error);
         });
     }, []);
+
+    const maximo = peripheral.length / cantidadPorPagina
   
-    const maximo = gaming.length / cantidadPorPagina
-    
     return (
       <>
       <div className="contenedorCardsGamers container-fluid">
-         <h1 className=" titleCollection "> Buzos </h1>
-        {gaming.slice(
+         <h1 className=" titlebuzos "> Releases products</h1>
+        {peripheral.slice(
           (pagina-1)*cantidadPorPagina,
           (pagina-1)*cantidadPorPagina+cantidadPorPagina
-        ).map((collect) => (
-          <div className="cardGamer my-3" key={collect.id}>
+        ).map((periph) => (
+          <div className="cardGamer" key={periph.id}>
             <div className="imgCardGamer">
-              <img alt="Answer" className="imgCard" src={collect.img} />
+              <img alt="Answer" className="imgCard" src={periph.img} />
               <div className="text-start">
-                {collect.sale === "sale" ? (
+                {periph.sale === "sale" ? (
                   <p className="sale m-0">Sale</p>
                 ) : (
                   <p className="sale m-0">Sold out</p>
@@ -41,31 +40,31 @@ export const GamingPcs = () => {
               </div>
             </div>
             <div className="name-brand-price">
-              <p className="nameCard mt-3 mb-0">{collect.name}</p>
-              <p className="brandCard text-start text-uppercase">{collect.brand}</p>
+              <p className="nameCard mt-3 mb-0">{periph.name}</p>
+              <p className="brandCard text-start text-uppercase">{periph.brand}</p>
               <div className="prices">
                 <p className="prevPrice">{`$${new Intl.NumberFormat(
                   "es-MX"
-                ).format(collect.prevPrice)}.00`}</p>
+                ).format(periph.prevPrice)}.00`}</p>
                 <p className="priceCard text-start">{`$${new Intl.NumberFormat(
                   "es-MX"
-                ).format(collect.price)}.00`}</p>
+                ).format(periph.price)}.00`}</p>
               </div>
               <Link
-                className={`${collect.sale === "sale" ? "botonCard" : "botonSoldOut"}`}
-                to={`/cardGamersDetail/${collect.id}`}
+                className={`${periph.sale === "sale" ? "botonCard" : "botonSoldOut"}`}
+                to={`/cardGamersDetail/${periph.id}`}
               >
-                {`${collect.sale === "sale" ? "Add to cart" : "Sold Out"}`}
+                {`${periph.sale === "sale" ? "Add to cart" : "Sold Out"}`}
               </Link>
             </div>
           </div>
         ))}
       </div>
-      <Pagination pagina={pagina} setPagina={setPagina} maximo={maximo}/>
-      <Link to="/" className="linkBack">
+         <Pagination pagina={pagina} setPagina={setPagina} maximo={maximo}/>
+         <Link to="/" className="linkBack">
         <button className="buttonBack"> Back </button>
       </Link>
-      </>
+         </>
     );
   }
   

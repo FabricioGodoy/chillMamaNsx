@@ -6,11 +6,11 @@ import { Register } from "./components/navBar/login/register/register";
 import { Home } from "./components/home/home";
 import { Footer } from "./components/footer/footer";
 
-import { Collection } from "./components/navBar/collection/collection";
-import { GamingPcs } from "./components/navBar/gamingPcs/gamingPcs"
-import { OfficePcs } from "./components/navBar/officePcs/officePCs";
+import { Buzos } from "./components/navBar/buzos/buzos";
+import { Remeras } from "./components/navBar/remeras/remeras"
+import { Kids } from "./components/navBar/kids/kids";
 import { ComponentsNavBar } from "./components/navBar/ComponentsNavBar/componentsNavBar";
-import { Peripherals } from "./components/navBar/peripherals/peripherals";
+import { Releases } from "./components/navBar/releases/releases";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SlideHome from "./components/home/fragments/slider/SlideHome";
 import { CardGamersDetail } from "./components/home/fragments/cardGamersDetail";
@@ -28,11 +28,11 @@ function App() {
         <Route path="/register" element={<Register />} />
       
 
-        <Route path="/collection" element={<Collection />} />
-        <Route path="/gamingPcs" element={<GamingPcs />} />
-        <Route path="/officePcs" element={<OfficePcs />} />
+        <Route path="/buzos" element={<Buzos />} />
+        <Route path="/remeras" element={<Remeras />} />
+        <Route path="/kids" element={<Kids />} />
         <Route path="/componentsNavBar" element={<ComponentsNavBar />} />
-        <Route path="/peripherals" element={<Peripherals />} />
+        <Route path="/releases" element={<Releases />} />
         <Route path="/cardGamersDetail/:catId" element={<CardGamersDetail />} />
         <Route path="/cardOfficeDetail/:catId" element={<CardOfficeDetail />} />
       </Routes>

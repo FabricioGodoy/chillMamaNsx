@@ -5,13 +5,13 @@ import { RequestAllProducts } from "../../helpers/requestAllProducts";
 import { Link } from "react-router-dom";
 
 export default function CardOffice() {
-  const [officePc, setOfficePc] = useState([]);
+  const [kids, setkids] = useState([]);
 
   useEffect(() => {
     RequestAllProducts()
       .then((resp) => {
-        setOfficePc(resp.filter((pc) => pc.category === "Remeras"));
-        //     console.log(officePc);
+        setkids(resp.filter((pc) => pc.category === "Remeras"));
+        //     console.log(kids);
       })
       .catch((error) => {
         console.log(error);
@@ -21,9 +21,9 @@ export default function CardOffice() {
   return (
     <>
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Remeras</h1>
+        <h1 className=" titlebuzos "> Remeras</h1>
 
-        {officePc.map((pc) => (
+        {kids.map((pc) => (
           <div className="cardGamer" key={pc.id}>
             <div className="imgCardGamer">
               <img alt="Answer" className="imgCard" src={pc.img} />
@@ -58,7 +58,7 @@ export default function CardOffice() {
           </div>
         ))}
       </div>
-      <Link to="/officePcs" className="linkSeeAll">
+      <Link to="/kids" className="linkSeeAll">
         <button className="buttonSeeAll"> See all</button>
       </Link>
     </>

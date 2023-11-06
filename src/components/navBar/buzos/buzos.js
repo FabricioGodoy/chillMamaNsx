@@ -3,32 +3,32 @@ import { RequestAllProducts } from "../../helpers/requestAllProducts";
 import { Link } from "react-router-dom";
 import { Pagination } from "../../helpers/Pagination";
 
-import "./collection.css";
+import "./buzos.css";
 
-export function Collection() {
-  const [collection, setCollection] = useState([]);
+export function Buzos() { 
+  const [buzos, setbuzos] = useState([]);
   const [pagina, setPagina] = useState(1);
   const [cantidadPorPagina, setCantidadPorPagina] = useState(10);
 
   useEffect(() => {
     RequestAllProducts()
       .then((resp) => {
-        setCollection(resp.filter((collect) => collect.buzo === "yes"));
+        setbuzos(resp.filter((collect) => collect.buzo === "yes"));
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
-  const maximo = collection.length / cantidadPorPagina
+  const maximo = buzos.length / cantidadPorPagina
 
 
   return (
     <>
       {" "}
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titleCollection "> Buzos Chill Mama</h1>
-        {collection.slice(
+        <h1 className=" titlebuzos "> Buzos Chill Mama</h1>
+        {buzos.slice(
           (pagina-1)*cantidadPorPagina,
           (pagina-1)*cantidadPorPagina+cantidadPorPagina
         ).map((collect, i) => (

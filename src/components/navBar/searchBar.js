@@ -44,6 +44,11 @@ export const SearchBar = () => {
     }
     console.log(productFilter);
   };
+  const handleProductSelect = () => {
+
+    setSearchText("");
+    setProductFilter(data);
+  };
 
   return (
     <>
@@ -89,7 +94,7 @@ export const SearchBar = () => {
             </div>
           </div>
 
-          <div className=" ">
+          <div className="conteinerSearchResults ">
             {/* ESTAR ATENTOS AL NUMERO DE PRODUCTOS */}
             {productFilter && productFilter !== '' && productFilter.length !== 20  &&
               productFilter
@@ -99,7 +104,7 @@ export const SearchBar = () => {
                 )
                 .map((searchResult) => (
                   <div className="searchResults" key={searchResult.id}>
-                    <Link to={`/cardGamersDetail/${searchResult.id}`} className="linkSearchResults" >
+                    <Link to={`/cardGamersDetail/${searchResult.id}`} className="linkSearchResults" onClick={handleProductSelect} >
                         <p>{searchResult.name}</p>
                     </Link>
                   </div>

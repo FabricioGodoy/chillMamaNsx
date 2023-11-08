@@ -22,7 +22,7 @@ export default function CardGamers() {
   return (
     <>
       <div className="contenedorCardsGamers container-fluid">
-        <h1 className=" titlebuzos "> Buzos</h1>
+        <h1 className=" titlebuzos "> Buzosssssss</h1>
 
         {remeras
           .slice(
